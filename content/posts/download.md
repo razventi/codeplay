@@ -7,9 +7,7 @@ tags: ["폴리스너츠", "한글패치", "세가새턴", "xdelta"]
 
 ## 다운로드
 
-최신 패치는 GitHub **Releases** 에서 받으세요.
-
-> 📦 [**최신 패치 다운로드 (Releases)**](https://github.com/) <!-- 배포 저장소 Releases 주소로 변경 -->
+> 📦 [**최신 패치 다운로드 — Policenauts_KR_v718.zip**](/downloads/Policenauts_KR_v718.zip)
 
 배포본 구성:
 

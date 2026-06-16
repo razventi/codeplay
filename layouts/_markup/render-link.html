@@ -1,0 +1,6 @@
+{{- $u := .Destination -}}
+{{- /* 루트상대 내부 링크(/posts/ 등)는 baseURL 하위경로를 붙여 해석. 외부/앵커는 그대로. */ -}}
+{{- if and (strings.HasPrefix $u "/") (not (strings.HasPrefix $u "//")) -}}
+  {{- $u = strings.TrimPrefix "/" $u | relLangURL -}}
+{{- end -}}
+<a href="{{ $u }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if strings.Contains .Destination "://" }} rel="noopener noreferrer"{{ end }}>{{ .Text | safeHTML }}</a>

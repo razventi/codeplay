@@ -1,7 +1,5 @@
 # Hugo 설정 — 개발 블로그 (PaperMod)
-# 배포 전 baseURL 을 본인 GitHub Pages 주소로 바꾸세요.
-#   예) https://<유저명>.github.io/<저장소명>/
-baseURL = "https://example.github.io/blog/"
+baseURL = "https://razventi.github.io/dev_odyssey/"
 languageCode = "ko-kr"
 defaultContentLanguage = "ko"
 title = "라즈벤티 개발 블로그"          # 블로그 이름으로 변경
@@ -62,34 +60,34 @@ home = ["HTML", "RSS", "JSON"]   # JSON = 검색 인덱스
 
 [[params.socialIcons]]
   name = "github"
-  url = "https://github.com/"        # 본인 GitHub 주소로 변경
+  url = "https://github.com/razventi/dev_odyssey"
 
-# 상단 메뉴
+# 상단 메뉴 — url 은 앞 슬래시 없이(absLangURL 가 baseURL 하위경로를 붙임)
 [menu]
   [[menu.main]]
     identifier = "posts"
     name = "글 목록"
-    url = "/posts/"
+    url = "posts/"
     weight = 10
   [[menu.main]]
     identifier = "categories"
     name = "카테고리"
-    url = "/categories/"
+    url = "categories/"
     weight = 20
   [[menu.main]]
     identifier = "polkr"
     name = "폴리스너츠 한글화"
-    url = "/categories/폴리스너츠-한글화/"
+    url = "categories/폴리스너츠-한글화/"
     weight = 30
   [[menu.main]]
     identifier = "tags"
     name = "태그"
-    url = "/tags/"
+    url = "tags/"
     weight = 40
   [[menu.main]]
     identifier = "search"
     name = "검색"
-    url = "/search/"
+    url = "search/"
     weight = 50
 
 [markup.goldmark.renderer]
