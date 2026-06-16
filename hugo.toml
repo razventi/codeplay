@@ -1,114 +1,94 @@
-# Hugo 설정 — 개발 블로그 (Stack 테마)
+# Hugo 설정 — 개발 블로그 (PaperMod)
 baseURL = "https://razventi.github.io/dev_odyssey/"
+languageCode = "ko-kr"
 defaultContentLanguage = "ko"
-locale = "ko-KR"
-title = "라즈벤티 개발 블로그"
-theme = "hugo-theme-stack"
+title = "라즈벤티 개발 블로그"          # 블로그 이름으로 변경
+theme = "PaperMod"
 
-hasCJKLanguage = true
+enableInlineShortcodes = true
+enableRobotsTXT = true
+hasCJKLanguage = true            # 한국어 단어 수/요약 정확도
 summaryLength = 30
 
 [pagination]
   pagerSize = 10
 
 [outputs]
-  home = ["HTML", "RSS"]   # 검색 인덱스(JSON)는 검색 페이지가 생성
+home = ["HTML", "RSS", "JSON"]   # JSON = 검색 인덱스
 
-# 분류 체계
+# 분류 체계: 카테고리 + 태그 (폴리스너츠 한글화 = 하나의 카테고리)
 [taxonomies]
   category = "categories"
   tag = "tags"
 
 [params]
-  mainSections = ["posts"]
-  rssFullContent = true
-  description = "개발·기술 그리고 게임 한글화 작업 기록"
+  env = "production"
+  description = "개발·기술·게임 한글화 기록"
+  keywords = ["개발", "블로그", "한글패치", "폴리스너츠"]
+  author = "라즈벤티"
+  DateFormat = "2006-01-02"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  ShowPostNavLinks = true
+  ShowRssButtonInSectionTermList = true
+  disableSpecial1stPost = false
 
-  [params.footer]
-    since = 2026
-    customText = "라즈벤티 개발 블로그"
+  # 홈 화면 인사말
+  [params.homeInfoParams]
+    Title = "라즈벤티 개발 블로그 👋"
+    Content = """
+개발·기술 그리고 게임 한글화 작업 기록을 남깁니다.
 
-  [params.dateFormat]
-    published = "2006-01-02"
-    lastUpdated = "2006-01-02"
+대표 프로젝트: **세가 새턴 '폴리스너츠' 한국어 번역 패치** —
+[폴리스너츠 한글화 카테고리](/categories/폴리스너츠-한글화/) 에서 진행 기록과 다운로드를 볼 수 있습니다.
+"""
 
-  # 좌측 사이드바(프로필)
-  [params.sidebar]
-    compact = false
-    # avatar 이미지를 넣으려면 static/img/avatar.png 두고 아래 주석 해제
-    # [params.sidebar.avatar]
-    #   enabled = true
-    #   local = true
-    #   src = "img/avatar.png"
-    [params.sidebar.subtitle]
-      # (subtitle 은 사이트 description 으로 표시됨)
+  # 검색 페이지용 (Fuse.js)
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
 
-  [params.article]
-    headingAnchor = true
-    math = false
-    toc = true
-    readingTime = true
-    [params.article.license]
-      enabled = false
-
-  # 색상 — 기본을 밝게(light)
-  [params.colorScheme]
-    toggle = true
-    default = "light"
-
-  # 우측 위젯
-  [params.widgets]
-    [[params.widgets.homepage]]
-      type = "search"
-    [[params.widgets.homepage]]
-      type = "categories"
-      [params.widgets.homepage.params]
-        limit = 10
-    [[params.widgets.homepage]]
-      type = "tag-cloud"
-      [params.widgets.homepage.params]
-        limit = 20
-    [[params.widgets.page]]
-      type = "toc"
-
-  [params.opengraph.twitter]
-    card = "summary_large_image"
-
-  [params.comments]
-    enabled = false
-
-# 좌측 메뉴 — 소셜
-[[menu.social]]
-  identifier = "github"
-  name = "GitHub"
+[[params.socialIcons]]
+  name = "github"
   url = "https://github.com/razventi/dev_odyssey"
-  [menu.social.params]
-    icon = "brand-github"
 
-# 좌측 메뉴 — pageRef 로 지정(Stack 은 .URL 을 그대로 출력하므로 하위경로 자동 반영)
-[[menu.main]]
-  identifier = "home"
-  name = "홈"
-  pageRef = "/"
-  weight = -100
-  [menu.main.params]
-    icon = "home"
-
-[[menu.main]]
-  identifier = "categories"
-  name = "카테고리"
-  pageRef = "/categories/"
-  weight = -80
-  [menu.main.params]
-    icon = "categories"
-
-[[menu.main]]
-  identifier = "polkr"
-  name = "폴리스너츠 한글화"
-  pageRef = "/categories/폴리스너츠-한글화/"
-  weight = -70
-  [menu.main.params]
-    icon = "hash"
+# 상단 메뉴 — url 은 앞 슬래시 없이(absLangURL 가 baseURL 하위경로를 붙임)
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "글 목록"
+    url = "posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "categories"
+    name = "카테고리"
+    url = "categories/"
+    weight = 20
+  [[menu.main]]
+    identifier = "polkr"
+    name = "폴리스너츠 한글화"
+    url = "categories/폴리스너츠-한글화/"
+    weight = 30
+  [[menu.main]]
+    identifier = "tags"
+    name = "태그"
+    url = "tags/"
+    weight = 40
+  [[menu.main]]
+    identifier = "search"
+    name = "검색"
+    url = "search/"
+    weight = 50
 
 [markup.goldmark.renderer]
-  unsafe = true
+  unsafe = true       # 마크다운 내 HTML 허용 (배지/버튼 등)
