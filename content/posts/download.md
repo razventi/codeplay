@@ -3,6 +3,7 @@ title: "폴리스너츠 한글판 패치 — 다운로드 · 적용법"
 date: 2026-06-16
 categories: ["폴리스너츠 한글화"]
 tags: ["폴리스너츠", "한글패치", "세가새턴", "xdelta"]
+aliases: ["/posts/license/"]
 ---
 
 ## 다운로드
@@ -44,7 +45,7 @@ certutil -hashfile "Policenauts (Japan) (Disc 1) (Track 1).bin" SHA1
 
 ## 1. 다른 포맷을 가지고 있다면 → 먼저 정본(2트랙 BIN/CUE)으로 변환
 
-- **CHD** (새턴 에뮬에서 가장 흔함)
+- **CHD** (가장 흔한 압축 포맷)
   ```bat
   chdman extractcd -i 입력.chd -o "Policenauts (Japan) (Disc N).cue" -ob "Policenauts (Japan) (Disc N) (Track 1).bin"
   ```
@@ -71,22 +72,23 @@ xdelta3 -d -s "Policenauts (Japan) (Disc N) (Track 1).bin" policenauts_kr_disc{N
 
 ---
 
-## 3. 부팅용 구성
+## 검증값
 
-아래 3개를 같은 폴더에 두고 `.cue` 를 에뮬레이터로 엽니다.
-
-| 파일 | 출처 |
-|---|---|
-| `Policenauts_KR (Disc N) (Track 1).bin` | 패치로 생성한 데이터 트랙 |
-| `Policenauts (Japan) (Disc N) (Track 2).bin` | 원본 오디오 트랙 그대로 복사 |
-| `Policenauts_KR (Disc N).cue` | 동봉 (cue/ 폴더) |
-
-**권장 에뮬레이터: [Ymir](https://github.com/StrikerX3/Ymir)** (런타임 검증 완료).
-실기(실제 새턴)는 EDC/ECC 재계산이 필요합니다.
+> 배포본 zip 안의 `README.txt` 에 디스크별 원본/한글 Track1·원본 Track2 SHA-1 과 패치 크기가 들어 있습니다.
+> 적용 후 산출물 Track1 SHA-1 을 대조하면 정상 패치를 확인할 수 있습니다.
 
 ---
 
-## 검증값
+## 이용 조건 및 면책
 
-> Release 의 `README.txt` 에 디스크별 원본/한글 Track1·원본 Track2 SHA-1 과 패치 크기가 들어 있습니다.
-> 적용 후 산출물 Track1 SHA-1 을 대조하면 정상 패치를 확인할 수 있습니다.
+- 본 패치는 **비영리 팬 번역물**이며, 게임 데이터를 일절 포함하지 않습니다.
+  원본 게임의 저작권은 **KONAMI** 에 있습니다.
+- 본 패치는 **원본 게임(Policenauts, 일본판)을 합법적으로 소유한 이용자**가
+  **개인적 용도로만** 사용해야 합니다.
+- 패치 또는 패치가 적용된 게임 데이터(BIN/CUE/CHD 등)를 **재배포·판매하는 행위를 금지**합니다.
+  본 패치 파일 자체의 비영리적 공유만 허용합니다.
+- 본 패치 사용으로 발생하는 **어떠한 문제(데이터 손상·법적 책임 등)에 대해 제작자는 책임지지 않습니다.**
+  사용 전 원본을 반드시 백업하세요.
+- 저작권자(KONAMI)의 요청이 있을 경우 **배포를 즉시 중단합니다.**
+
+> 위 고지는 법률 자문이 아니며, 일반적인 팬 번역 배포 관행에 따른 것입니다.
