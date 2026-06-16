@@ -37,8 +37,3 @@ ShowToc: false
 <!-- 아래는 예시입니다. 실제 주소로 바꾸거나 필요 없는 줄은 지우세요. -->
 - GitHub: <!-- https://github.com/razventi -->
 - Email: razventi@gmail.com
-
----
-
-> 이 페이지는 자유롭게 채워 넣는 자기소개 공간입니다. 경력·이력, 더 많은 프로젝트,
-> SNS 링크 등을 원하는 대로 추가하세요.
