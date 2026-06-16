@@ -50,9 +50,32 @@ home = ["HTML", "RSS", "JSON"]   # JSON = 검색 인덱스
 
 ### 프로젝트
 
-- 🚓 **[폴리스너츠 한글화](/categories/폴리스너츠-한글화/)** — 세가 새턴 명작 어드벤처 한국어 번역 패치
-- 🃏 **[포커와 토비](/categories/포커와-토비/)** — *준비 중*
-- 🎯 **[크로스히트](/categories/크로스히트/)** — *준비 중*
+<style>
+.proj-grid{display:flex;flex-wrap:wrap;gap:1rem;margin:1.2rem 0}
+.proj-card{flex:1 1 220px;max-width:280px;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--entry);text-decoration:none!important;color:inherit;display:block;transition:transform .15s ease}
+.proj-card:hover{transform:translateY(-4px)}
+.proj-card img{width:100%;height:160px;object-fit:cover;display:block}
+.proj-card .ph{width:100%;height:160px;display:flex;align-items:center;justify-content:center;font-size:2.6rem;background:var(--code-bg)}
+.proj-card .body{padding:.8rem 1rem}
+.proj-card .t{font-weight:700}
+.proj-card .s{font-size:.85rem;opacity:.7;margin-top:.25rem}
+.proj-card.soon{opacity:.6}
+</style>
+
+<div class="proj-grid">
+<a class="proj-card" href="/dev_odyssey/categories/폴리스너츠-한글화/">
+<img src="/dev_odyssey/img/policenauts-cover.jpg" alt="폴리스너츠">
+<div class="body"><div class="t">🚓 폴리스너츠 한글화</div><div class="s">세가 새턴 한국어 번역 패치 · 완료</div></div>
+</a>
+<a class="proj-card soon" href="/dev_odyssey/categories/포커와-토비/">
+<div class="ph">🃏</div>
+<div class="body"><div class="t">포커와 토비</div><div class="s">준비 중</div></div>
+</a>
+<a class="proj-card soon" href="/dev_odyssey/categories/크로스히트/">
+<div class="ph">🎯</div>
+<div class="body"><div class="t">크로스히트</div><div class="s">준비 중</div></div>
+</a>
+</div>
 """
 
   # 검색 페이지용 (Fuse.js)
