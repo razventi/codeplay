@@ -9,3 +9,6 @@ Thumbs.db
 
 # 로컬 작업용 원본 리소스 (커밋 제외)
 /_resource/
+
+# OMC 에이전트 상태/세션 파일
+.omc/

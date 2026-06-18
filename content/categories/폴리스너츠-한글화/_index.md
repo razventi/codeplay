@@ -12,7 +12,7 @@ description: "세가 새턴 '폴리스너츠'(일본판) 한국어 번역 패치
 - ℹ️ [프로젝트 소개](/posts/about/)
 - 🛠 [기술 가이드 — 한글화에서 알아야 했던 것들](/posts/policenauts-localization-guide/)
 
-**개발기 (3부작)**
+**작업 후기 (3부작)**
 - 📖 [① 글자를 가르치다](/posts/devlog-policenauts-1/)
 - 📖 [② 검은 화면과의 긴 싸움](/posts/devlog-policenauts-2/)
 - 📖 [③ 다 갈아엎고, 전부 새로](/posts/devlog-policenauts-3/)
