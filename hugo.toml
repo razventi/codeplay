@@ -60,7 +60,7 @@ home = ["HTML", "RSS", "JSON"]   # JSON = 검색 인덱스
 .proj-card .body{padding:.8rem 1rem}
 .proj-card .t{font-weight:700}
 .proj-card .s{font-size:.85rem;opacity:.7;margin-top:.25rem}
-.proj-card.soon{opacity:.6}
+
 </style>
 
 <div class="proj-grid">
