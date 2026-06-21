@@ -1,7 +1,7 @@
 ---
 title: "블로그를 시작하며"
 date: 2026-06-15T09:00:00+09:00
-categories: ["잡담"]
+categories: ["talk"]
 tags: ["블로그"]
 ---
 

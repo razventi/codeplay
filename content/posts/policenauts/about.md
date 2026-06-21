@@ -1,7 +1,7 @@
 ---
 title: "폴리스너츠 한글화 프로젝트 소개"
 date: 2026-06-21
-categories: ["폴리스너츠 한글화"]
+categories: ["policenauts"]
 tags: ["폴리스너츠", "한글패치", "코지마히데오"]
 ---
 

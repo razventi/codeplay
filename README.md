@@ -22,9 +22,9 @@ content/
       changelog.md                     패치 변경 이력
       policenauts-localization-guide.md  한글화 기술 가이드
       devlog-policenauts-1~3.md        개발기 3부작
-  categories/                          카테고리 소개 페이지(_index.md)
-    폴리스너츠-한글화/                  (완료, 글 묶임)
-    머지시어터/ · 포커와-토비/ · 크로스히트/   (준비 중 프로젝트)
+  categories/                          카테고리 소개 페이지(_index.md) — 폴더명=영문 슬러그(URL), title=한글 표시명
+    policenauts/                        폴리스너츠 한글화 (완료, 글 묶임)
+    merge-theater/ · poker-toby/ · crosshit/   (준비 중 프로젝트)
 static/
   downloads/Policenauts_KR_v1.0.0.zip  배포 패치 zip
   img/policenauts-cover.jpg            홈 프로젝트 카드 커버
@@ -40,10 +40,14 @@ layouts/_markup/render-link.html       내부 링크에 /codeplay/ 하위경로 
 ---
 title: "글 제목"
 date: 2026-06-17                  # 최신 날짜일수록 글 목록(/posts/) 위로
-categories: ["폴리스너츠 한글화"]   # 프로젝트(카테고리)로 묶임
+categories: ["policenauts"]        # 영문 슬러그(=URL). 한글 표시명은 categories/<슬러그>/_index.md 의 title 로 지정
 tags: ["태그1", "태그2"]
 ---
 ```
+
+> 카테고리는 **영문 슬러그**를 값으로 쓴다(예: `policenauts`). URL이 `/categories/policenauts/` 로 짧아지고,
+> 화면에 보이는 한글 이름은 `content/categories/<슬러그>/_index.md` 의 `title` 에서 가져온다.
+> (Hugo 는 taxonomy term URL 에 `slug:` 프론트매터를 적용하지 않으므로, 폴더명·값 자체를 영문으로 둔다.)
 
 ```bash
 git add -A && git commit -m "새 글: 제목" && git push

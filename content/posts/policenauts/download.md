@@ -1,7 +1,7 @@
 ---
 title: "폴리스너츠 한글판 패치 — 다운로드 · 설치 가이드"
 date: 2026-06-21
-categories: ["폴리스너츠 한글화"]
+categories: ["policenauts"]
 tags: ["폴리스너츠", "한글패치", "세가새턴", "xdelta"]
 ---
 

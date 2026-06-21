@@ -1,7 +1,7 @@
 ---
 title: "폴리스너츠 한글판 패치 — 변경 이력"
 date: 2026-06-21
-categories: ["폴리스너츠 한글화"]
+categories: ["policenauts"]
 tags: ["폴리스너츠", "한글패치", "changelog"]
 ---
 
