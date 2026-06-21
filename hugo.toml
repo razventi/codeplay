@@ -66,7 +66,7 @@ home = ["HTML", "RSS", "JSON"]   # JSON = 검색 인덱스
 <div class="proj-grid">
 <a class="proj-card" href="/codeplay/categories/폴리스너츠-한글화/">
 <img src="/codeplay/img/policenauts-cover.jpg" alt="폴리스너츠">
-<div class="body"><div class="t">🚓 폴리스너츠 한글화</div><div class="s">세가 새턴 한국어 번역 패치 · 완료</div></div>
+<div class="body"><div class="t">폴리스너츠 한글화</div><div class="s">세가 새턴 한국어 번역 패치 · 완료</div></div>
 </a>
 <a class="proj-card soon iconcover" href="/codeplay/categories/포커와-토비/">
 <img src="/codeplay/img/toby-cover.png" alt="포커와 토비">
