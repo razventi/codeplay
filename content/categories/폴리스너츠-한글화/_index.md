@@ -7,9 +7,9 @@ description: "세가 새턴 '폴리스너츠'(일본판) 한국어 번역 패치
 시작부터 엔딩까지 전체 번역·검수를 마쳤습니다.
 
 **패치 · 자료**
+- ℹ️ [프로젝트 소개](/posts/about/)
 - 📥 [다운로드 · 적용법](/posts/download/) (이용 조건·면책 포함)
 - 📋 [변경 이력](/posts/changelog/)
-- ℹ️ [프로젝트 소개](/posts/about/)
 - 🛠 [기술 가이드 — 한글화에서 알아야 했던 것들](/posts/policenauts-localization-guide/)
 
 **작업 후기 (3부작)**
